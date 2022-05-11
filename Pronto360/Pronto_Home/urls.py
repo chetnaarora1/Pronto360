@@ -12,6 +12,7 @@ urlpatterns = [
     path('HVAC/', views.services, name='HVAC'),
     path('carpenter/', views.services, name='carpenter'),
     path('other/', views.services, name='other'),
+    path('blog-post', views.blogpost, name='blog_post'),
     path('blog/', views.blog, name='blog'),
     path('account/', views.account, name='account'),
     path('help/', views.help, name='help'),

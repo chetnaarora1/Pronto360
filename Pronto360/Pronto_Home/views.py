@@ -91,8 +91,8 @@ def menu_options(request):
 def invoice(request):
     return render(request, 'invoice.html')
 
-# def _(request):
-#     return render(request, '')
+def blogpost(request):
+    return render(request, 'blog-post.html')
 
 # def _(request):
 #     return render(request, '')
