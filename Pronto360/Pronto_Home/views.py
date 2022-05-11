@@ -94,10 +94,12 @@ def invoice(request):
 def blogpost(request):
     return render(request, 'blog-post.html')
 
-# def _(request):
-#     return render(request, '')
-# def _(request):
-#     return render(request, '')
+
+def filterscolsearchaside(request):
+    return render(request, 'grid-listings-filterscol-search-aside.html')
+
+def filterstopsearchaside(request):
+    return render(request, 'grid-listings-filterstop-search-aside.html')
 
 # def _(request):
 #     return render(request, '')

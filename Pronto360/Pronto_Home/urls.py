@@ -41,4 +41,7 @@ urlpatterns = [
     path('register', views.register, name='register'),
     path('menu-options', views.menu_options, name='menu_options'),
     path('invoice', views.invoice, name='invoice'),
+    path('col-search-aside', views.filterscolsearchaside, name='col_search_aside'),
+    path('stop-search-aside', views.filterstopsearchaside, name='stop_side_search'),
+    
 ]
