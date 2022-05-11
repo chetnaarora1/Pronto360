@@ -1,5 +1,5 @@
 from django.urls import path
-# from Pronto360.Pronto_Home.views import detailcarousel_2, err_404, listingmap
+
 from Pronto_Home import views
 
 urlpatterns = [
