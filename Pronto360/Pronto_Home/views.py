@@ -141,11 +141,7 @@ def iconpack3(request):
 def iconpack4(request):
     return render(request, 'icon-pack-4.html')
 
-# def cart3(request):
-#     return render(request, 'cart-3.html')
 
-# def _(request):
-#     return render(request, '')
 
 # def _(request):
 #     return render(request, '')

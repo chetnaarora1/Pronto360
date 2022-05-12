@@ -37,7 +37,7 @@
 		<div id="logo">
 			<a href="{% url 'home' %}" title="Pronto360 - Directory and listings template">
 				<img src="{% static 'img/logo.png' %}" width="165" height="35" alt="" class="logo_normal">
-				<img src="% static 'img/logo.png' %}" width="165" height="35" alt="" class="logo_sticky">
+				<img src="{% static 'img/logo.png' %}" width="165" height="35" alt="" class="logo_sticky">
 			</a>
 		</div>
 		<ul id="top_menu">
@@ -109,11 +109,11 @@
 		               <li>
 		                    <span><a href="#0">Detail pages</a></span>
 		                    <ul>
-		                        <li><a href="detail-hotel.html">Detail page 1</a></li>
-		                        <li><a href="detail-restaurant.html">Detail page 2</a></li>
-		                        <li><a href="detail-shop.html">Detail page 3</a></li>
-		                        <li><a href="detail-carousel.html">Detail page Carousel 1</a></li>
-		                        <li><a href="detail-carousel-2.html">Detail page Carousel 2</a></li>
+		                        <li><a href="{% url 'detail-shop' %}">Detail page 1</a></li>
+		                        <li><a href="{% url 'detail-hotel' %}">Detail page 2</a></li>
+		                        <li><a href="{% url 'detil-restaurant' %}">Detail page 3</a></li>
+		                        <li><a href="{% url 'detail-carousel' %}">Detail page Carousel 1</a></li>
+		                        <li><a href="{% url 'detail-carousel-2' %}">Detail page Carousel 2</a></li>
 		                    </ul>
 		                </li>
 		                <li><a href="{% url 'bookings' %}">Bookings - Purchases</a></li>
