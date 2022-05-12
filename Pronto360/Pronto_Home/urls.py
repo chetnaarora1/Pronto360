@@ -1,5 +1,4 @@
 from django.urls import path
-
 from Pronto_Home import views
 
 urlpatterns = [
@@ -35,13 +34,26 @@ urlpatterns = [
     path('detail-shop/', views.detail_shop, name = 'detail-shop'),
     path('detail-carousel/', views.detailcarousel, name='detail-carousel'),
     path('detail-carousel-2/', views.detailcarousel_2, name='detail-carousel-2'),
+    path("pricing-tables/", views.pricing_tables, name='pricing_tables'),
     path('error-404/', views.err_404, name='404'),
     path('contacts-2/', views.contacts2, name='contacts_2'),
-    path('login', views.login, name='login'),
-    path('register', views.register, name='register'),
-    path('menu-options', views.menu_options, name='menu_options'),
-    path('invoice', views.invoice, name='invoice'),
-    path('col-search-aside', views.filterscolsearchaside, name='col_search_aside'),
-    path('stop-search-aside', views.filterstopsearchaside, name='stop_side_search'),
-    
+    path('login/', views.login, name='login'),
+    path('register/', views.register, name='register'),
+    path('menu-options/', views.menu_options, name='menu_options'),
+    path('invoice/', views.invoice, name='invoice'),
+    path('col-search-aside/', views.filterscolsearchaside, name='col_search_aside'),
+    path('stop-search-aside/', views.filterstopsearchaside, name='stop_side_search'),
+    path('search-aside-openstreetmap/', views.searchasideopenstreetmap, name='col_search_aside_openstreetmap'),
+    path('stop-aside-openstreetmap/', views.stopopenstreetmap, name='stop_search_aside_openstreetmap'),
+    path('col-openstreetmap/', views.colopenstreetmap, name='col_openstreetmap'),
+    path('isotope-openstreetmap/', views.isotopeopenstreetmap, name='isotope_openstreetmap'),
+    path('row-col-openstreetmap/', views.rowcolopenstreetmap, name='row_col_openstreetmap'),
+    path('row-stop-openstreetmap/', views.rowstopopenstreetmap, name='row_stop_openstreetmap'),
+    path('row-isotope-openstreetmap/', views.rowisotopeopenstreetmap, name='row_isotope_openstreetmap'),
+    path("detail-hotel-openstreetmap/", views.detailhotelopenstreetmap, name='detail_hotel_openstreeetmap'),
+    path("listing-map-openstreetmap/", views.listingmapopenstreetmap, name='listing_map_openstreetmap'),
+    path('icon-pack-1', views.iconpack1, name='iconpack1'),
+    path('icon-pack-2/', views.iconpack2, name='iconpack2'),
+    path('icon-pack-3/', views.iconpack3, name='iconpack3'),
+    path('icon-pack-4/', views.iconpack4, name='iconpack4'),
 ]

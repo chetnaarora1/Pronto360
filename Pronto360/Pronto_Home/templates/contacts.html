@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 
 <head>
     <meta charset="utf-8">
@@ -19,12 +20,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- BASE CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	<link href="css/vendors.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'css/vendors.css' %}" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
 </head>
 
 <body>
@@ -36,16 +37,16 @@
 			<div class="row">
 				<div class="col-lg-3 col-12">
 					<div id="logo">
-						<a href="index.html">
-							<img src="img/logo.png" width="165" height="35" alt="" class="logo_sticky">
+						<a href="{% url 'home' %}">
+							<img src="{% static 'img/logo.png' %}" width="165" height="35" alt="" class="logo_sticky">
 						</a>
 					</div>
 				</div>
 				<div class="col-lg-9 col-12">
 					<ul id="top_menu">
-						<li><a href="account.html" class="btn_add">Add Listing</a></li>
+						<li><a href="{% url 'account' %}" class="btn_add">Add Listing</a></li>
 						<li><a href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a></li>
-						<li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+						<li><a href="{% url 'wishlist' %}" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
 					</ul>
 					<!-- /top_menu -->
 					<a href="#menu" class="btn_mobile">
@@ -57,7 +58,7 @@
 					</a>
 					<nav id="menu" class="main-menu">
 						<ul>
-							<li><span><a href="#0">Home</a></span>
+							<li><span><a href="{% url 'home' %}">Home</a></span>
 								<!--<ul>
 									<li><a href="index-2.html">Home version 1</a></li>
 									<li><a href="index-2.html">Home version 2</a></li>
@@ -71,7 +72,7 @@
 							<li><span><a href="#0">Services</a></span>
 								<ul>
 									<li>
-										<span><a href="grid-listings-filterscol-search-aside.html">Electrician</a></span>
+										<span><a href="{% url 'electrician' %}">Electrician</a></span>
 										<ul>
 											<!--<li><a href="grid-listings-filterscol-search-aside.html">Sidebar+Search mobile 1</a></li>
 											<li><a href="grid-listings-filterstop-search-aside.html">Full+Search mobile 1</a></li>
@@ -81,7 +82,7 @@
 										</ul>
 									</li>
 									<li>
-										<span><a href="grid-listings-filterscol-search-aside.html">Plumbing</a></span>
+										<span><a href="{% url 'plumbing' %}">Plumbing</a></span>
 										<ul>
 											<!--<li><a href="row-listings-filterscol-search-aside.html">Sidebar+Search mobile 1</a></li>
 											<li><a href="row-listings-filterstop-search-aside.html">Full+Search mobile 1</a></li>
@@ -91,7 +92,7 @@
 										</ul>
 									</li>
 									<li>
-										<span><a href="grid-listings-filterscol-search-aside.html">Handyman</a></span>
+										<span><a href="{% url 'handyman' %}">Handyman</a></span>
 										<ul>
 											<!--<li><a href="row-listings-filterscol-search-aside.html">Sidebar+Search mobile 1</a></li>
 											<li><a href="row-listings-filterstop-search-aside.html">Full+Search mobile 1</a></li>
@@ -101,7 +102,7 @@
 										</ul>
 									</li>
 									<li>
-										<span><a href="grid-listings-filterscol-search-aside.html">Roofing</a></span>
+										<span><a href="{% url 'roofing' %}">Roofing</a></span>
 										<ul>
 										   <!-- <li><a href="row-listings-filterscol-search-aside.html">Sidebar+Search mobile 1</a></li>
 											<li><a href="row-listings-filterstop-search-aside.html">Full+Search mobile 1</a></li>
@@ -111,7 +112,7 @@
 										</ul>
 									</li>
 									<li>
-										<span><a href="grid-listings-filterscol-search-aside.html">HVAC</a></span>
+										<span><a href="{% url 'HVAC' %}">HVAC</a></span>
 										<ul>
 											<!--<li><a href="row-listings-filterscol-search-aside.html">Sidebar+Search mobile 1</a></li>
 											<li><a href="row-listings-filterstop-search-aside.html">Full+Search mobile 1</a></li>
@@ -121,7 +122,7 @@
 										</ul>
 									</li>
 									<li>
-										<span><a href="grid-listings-filterscol-search-aside.html">Carpenter</a></span>
+										<span><a href="{% url 'carpenter' %}">Carpenter</a></span>
 										<ul>
 										   <!-- <li><a href="row-listings-filterscol-search-aside.html">Sidebar+Search mobile 1</a></li>
 											<li><a href="row-listings-filterstop-search-aside.html">Full+Search mobile 1</a></li>
@@ -158,7 +159,7 @@
 											<li><a href="detail-carousel-2.html">Detail page Carousel 2</a></li>
 										</ul>-->
 									</li>
-									<li><a href="grid-listings-filterscol-search-aside.html">Other Services</a></li>
+									<li><a href="{% url 'services' %}">Other Services</a></li>
 									<!--<li><a href="checkout.html">Checkout</a></li>
 									<li><a href="confirm.html">Confirm</a></li>-->
 								</ul>
@@ -166,12 +167,12 @@
 							<li><span><a href="#0">Pages</a></span>
 								<ul>
 									<!--li><a href="admin_section/index.html">Admin section</a></li>-->
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="account.html">Account</a></li>
-									<li><a href="help.html">Help Section</a></li>
-									<li><a href="faq.html">Faq Section</a></li>
-									<li><a href="wishlist.html">Wishlist page</a></li>
-									<li><a href="contacts.html">Contacts</a></li>
+									<li><a href="{% url 'blog' %}">Blog</a></li>
+									<li><a href="{% url 'account' %}">Account</a></li>
+									<li><a href="{% url 'help' %}">Help Section</a></li>
+									<li><a href="{% url 'faq' %}">Faq Section</a></li>
+									<li><a href="{% url 'wishlist' %}">Wishlist page</a></li>
+									<li><a href="{% url 'contacts' %}">Contacts</a></li>
 									<li>
 										<!--<span><a href="#0">Icon Packs</a></span>
 										<ul>
@@ -181,11 +182,10 @@
 											<li><a href="icon-pack-4.html">Icon pack 4</a></li>
 										</ul>-->
 									</li>
-									<li><a href="about.html">About</a></li>
+									<li><a href="{% url 'about' %}">About</a></li>
 									<!--<li><a href="media-gallery.html">Media gallery</a></li>-->
 								</ul>
 							</li>
-							<li><span><a href="admin_section/index.html">Admin Daashboard</span>
 								<ul>
 								  <!--<li><a href="404.html">404 page</a></li>
 									<li><a href="contacts-2.html">Contacts 2</a></li>
@@ -216,7 +216,6 @@
 	<!-- /sub_header -->
 		
 	<main>
-		<div id="map_contact"></div>
 		<!-- /map -->
 		<div class="container margin_60_35">
 			<div class="row justify-content-center">
@@ -304,12 +303,12 @@
 					<h3 data-bs-target="#collapse_ft_1">Quick Links</h3>
 					<div class="collapse dont-collapse-sm" id="collapse_ft_1">
 						<ul class="links">
-							<li><a href="#0">About us</a></li>
-							<li><a href="#0">Faq</a></li>
-							<li><a href="#0">Help</a></li>
-							<li><a href="#0">My account</a></li>
-							<li><a href="#0">Create account</a></li>
-							<li><a href="#0">Contacts</a></li>
+							<li><a href="{% url 'about' %}">About us</a></li>
+							<li><a href="{% url 'faq' %}">Faq</a></li>
+							<li><a href="{% url 'help' %}">Help</a></li>
+							<li><a href="{% url 'account' %}">My account</a></li>
+							<li><a href="{% url 'register' %}">Create account</a></li>
+							<li><a href="{% url 'contacts' %}">Contacts</a></li>
 						</ul>
 					</div>
 				</div>
@@ -317,12 +316,9 @@
 					<h3 data-bs-target="#collapse_ft_2">Categories</h3>
 					<div class="collapse dont-collapse-sm" id="collapse_ft_2">
 						<ul class="links">
-							<li><a href="#0">Shops</a></li>
-							<li><a href="#0">Hotels</a></li>
-							<li><a href="#0">Restaurants</a></li>
-							<li><a href="#0">Bars</a></li>
-							<li><a href="#0">Events</a></li>
-							<li><a href="#0">Fitness</a></li>
+							<li><a href="{% url 'detail-shop' %}">Shops</a></li>
+							<li><a href="{% url 'detail-hotel' %}">Hotels</a></li>
+							<li><a href="{% url 'detail-restaurant' %}">Restaurants</a></li>
 						</ul>
 					</div>
 				</div>
@@ -384,7 +380,7 @@
 								</select>
 							</div>
 						</li>
-						<li><img src="img/cards_all.svg" alt=""></li>
+						<li><img src="{% static 'img/cards_all.svg' %}" alt=""></li>
 					</ul>
 				</div>
 				<div class="col-lg-6">
@@ -432,7 +428,7 @@
 				</div>
 				<div class="text-center"><input type="submit" value="Log In" class="btn_1 full-width"></div>
 				<div class="text-center">
-					Don’t have an account? <a href="register.html">Sign up</a>
+					Don’t have an account? <a href="{% url 'register' %}">Sign up</a>
 				</div>
 				<div id="forgot_pw">
 					<div class="form-group">
@@ -452,14 +448,14 @@
 	<div id="toTop"></div><!-- Back to top button -->
 	
 	<!-- COMMON SCRIPTS -->
-    <script src="js/common_scripts.js"></script>
-	<script src="js/functions.js"></script>
-	<script src="assets/validate.js"></script>
+    <script src="{% static 'js/common_scripts.js' %}"></script>
+	<script src="{% static 'js/functions.js' %}"></script>
+	<script src="{% static 'assets/validate.js' %}"></script>
 
 	<!-- Map -->
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script src="js/mapmarker.jquery.js"></script>
-	<script src="js/mapmarker_func.jquery.js"></script>
+	<script src="{% static 'js/mapmarker.jquery.js' %}"></script>
+	<script src="{% static 'js/mapmarker_func.jquery.js' %}"></script>
   
 </body>
 </html>

@@ -76,7 +76,7 @@ def err_404(request):
 def contacts2(request):
     return render(request, 'contacts-2.html')
 
-def princing_tables(request):
+def pricing_tables(request):
     return render(request, 'pricing-tables.html')
 
 def login(request):
@@ -101,11 +101,55 @@ def filterscolsearchaside(request):
 def filterstopsearchaside(request):
     return render(request, 'grid-listings-filterstop-search-aside.html')
 
+def searchasideopenstreetmap(request):
+    return render(request, 'grid-listings-filterscol-search-aside-openstreetmap.html')
+
+def stopopenstreetmap(request):
+    return render(request, 'grid-listings-filterstop-search-aside-openstreetmap.html')
+
+def colopenstreetmap(request):
+    return render(request, 'grid-listings-filterscol-openstreetmap.html')
+
+def isotopeopenstreetmap(request):
+    return render(request, 'grid-listings-isotope-openstreetmap.html')
+
+def rowcolopenstreetmap(request):
+    return render(request, 'row-listings-filterscol-search-aside-openstreetmap.html')
+
+
+def rowstopopenstreetmap(request):
+    return render(request, 'row-listings-filterstop-openstreetmap.html')
+
+def rowisotopeopenstreetmap(request):
+    return render(request, 'row-listings-isotope-openstreetmap.html')
+
+def detailhotelopenstreetmap(request):
+    return render(request, 'detail-hotel-openstreetmap.html')
+
+def listingmapopenstreetmap(request):
+    return render(request, 'listing-map-openstreetmap.html')
+
+def iconpack1(request):
+    return render(request, 'icon-pack-1.html')
+
+def iconpack2(request):
+    return render(request, 'icon-pack-2.html')
+
+def iconpack3(request):
+    return render(request, 'icon-pack-3.html')
+
+def iconpack4(request):
+    return render(request, 'icon-pack-4.html')
+
+# def cart3(request):
+#     return render(request, 'cart-3.html')
+
 # def _(request):
 #     return render(request, '')
 
 # def _(request):
 #     return render(request, '')
+
 # def _(request):
 #     return render(request, '')
 
