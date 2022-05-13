@@ -166,7 +166,7 @@ def admin_user_profile(request):
     return render(request, 'admin_section/user-profile.html')
 def admin_bookmark(request):
     return render(request, 'admin_section/bookmarks.html')
-# def _(request):
-#     return render(request, '')
+def admin_home(request):
+    return render(request, 'admin_section/index.html')
 # def _(request):
 #     return render(request, '')

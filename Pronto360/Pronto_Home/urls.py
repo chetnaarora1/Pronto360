@@ -64,5 +64,6 @@ urlpatterns = [
     path('admin_dashboard/admin-messages', views.admin_messages, name='admin_messages'),
     path('admin_dashboard/admin-reviews/', views.admin_reviews, name='admin_reviews'),
     path('admin_dashboard/admin-tables', views.admin_tables, name='admin_tables'),
-    path('admin_dashboard/admin-user-profile', views.admin_user_profile, name='admin_user_profile')
+    path('admin_dashboard/admin-user-profile', views.admin_user_profile, name='admin_user_profile'),
+    path('admin-dashboard/', views.admin_home, name='admin_home')
 ]
