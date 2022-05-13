@@ -141,16 +141,32 @@ def iconpack3(request):
 def iconpack4(request):
     return render(request, 'icon-pack-4.html')
 
+def admin_addlisting(request):
+    return render(request, 'admin_section/add-listing.html')
 
+def admin_bookings(request):
+    return render(request, 'admin_section/bookings.html')
 
+def admin_charts(request):
+    return render(request, 'admin_section/charts.html')
+
+def admin_listings(request):
+    return render(request, 'admin_section/listings.html')
+
+def admin_messages(request):
+    return render(request, 'admin_section/messages.html')
+
+def admin_reviews(request):
+    return render(request, 'admin_section/reviews.html')
+
+def admin_tables(request):
+    return render(request, 'admin_section/tables.html')
+
+def admin_user_profile(request):
+    return render(request, 'admin_section/user-profile.html')
+def admin_bookmark(request):
+    return render(request, 'admin_section/bookmarks.html')
 # def _(request):
 #     return render(request, '')
-
-# def _(request):
-#     return render(request, '')
-
-# def _(request):
-#     return render(request, '')
-
 # def _(request):
 #     return render(request, '')

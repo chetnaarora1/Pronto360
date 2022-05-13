@@ -56,4 +56,13 @@ urlpatterns = [
     path('icon-pack-2/', views.iconpack2, name='iconpack2'),
     path('icon-pack-3/', views.iconpack3, name='iconpack3'),
     path('icon-pack-4/', views.iconpack4, name='iconpack4'),
+    path('admin_dashboard/admin-bookmarks', views.admin_bookmark,name='admin_bookmarks' ),
+    path('admin_dashboard/admin-add-listing/', views.admin_addlisting, name='admin_add_listing'),
+    path('admin_dashboard/admin-bookings/', views.admin_bookings, name='admin_bookings'),
+    path('admin_dashboard/admin-charts/', views.admin_charts, name='admin_charts'),
+    path('admin_dashboard/admin-listings', views.admin_listings, name='admin_listings'),
+    path('admin_dashboard/admin-messages', views.admin_messages, name='admin_messages'),
+    path('admin_dashboard/admin-reviews/', views.admin_reviews, name='admin_reviews'),
+    path('admin_dashboard/admin-tables', views.admin_tables, name='admin_tables'),
+    path('admin_dashboard/admin-user-profile', views.admin_user_profile, name='admin_user_profile')
 ]
