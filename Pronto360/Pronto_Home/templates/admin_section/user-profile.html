@@ -47,13 +47,13 @@
           </a>
         </li>
 		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Messages">
-          <a class="nav-link" href="{% url 'messages' %}">
+          <a class="nav-link" href="{% url 'admin_messages' %}">
             <i class="fa fa-fw fa-envelope-open"></i>
             <span class="nav-link-text">Messages</span>
           </a>
         </li>
 		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Bookings">
-          <a class="nav-link" href="{% url 'bookings' %}">
+          <a class="nav-link" href="{% url 'admin_bookings' %}">
             <i class="fa fa-fw fa-calendar-check-o"></i>
             <span class="nav-link-text">Bookings <span class="badge badge-pill badge-primary">6 New</span></span>
           </a>
@@ -353,7 +353,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="{% url '' %}">Logout</a>
+            <a class="btn btn-primary" href="{% url 'register' %}">Logout</a>
           </div>
         </div>
       </div>
