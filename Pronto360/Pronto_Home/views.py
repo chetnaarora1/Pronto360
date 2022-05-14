@@ -116,7 +116,6 @@ def isotopeopenstreetmap(request):
 def rowcolopenstreetmap(request):
     return render(request, 'row-listings-filterscol-search-aside-openstreetmap.html')
 
-
 def rowstopopenstreetmap(request):
     return render(request, 'row-listings-filterstop-openstreetmap.html')
 
@@ -164,8 +163,10 @@ def admin_tables(request):
 
 def admin_user_profile(request):
     return render(request, 'admin_section/user-profile.html')
+
 def admin_bookmark(request):
     return render(request, 'admin_section/bookmarks.html')
+
 def admin_home(request):
     return render(request, 'admin_section/index.html')
 # def _(request):
