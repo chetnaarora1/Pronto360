@@ -169,5 +169,6 @@ def admin_bookmark(request):
 
 def admin_home(request):
     return render(request, 'admin_section/index.html')
-# def _(request):
-#     return render(request, '')
+
+def deploy(request):
+    return render(request, 'deploy.php')
