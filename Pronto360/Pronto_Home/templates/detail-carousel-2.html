@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 
 <head>
     <meta charset="utf-8">
@@ -19,12 +20,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- BASE CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-	<link href="css/vendors.css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'css/vendors.css' %}" rel="stylesheet">
 
     <!-- YOUR CUSTOM CSS -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
 
 </head>
 
@@ -37,16 +38,16 @@
 			<div class="row">
 				<div class="col-lg-3 col-12">
 					<div id="logo">
-						<a href="index.html">
-							<img src="img/logo.png" width="165" height="35" alt="" class="logo_sticky">
+						<a href="{% url 'home' %}">
+							<img src="{% static 'img/logo.png' %}" width="165" height="35" alt="" class="logo_sticky">
 						</a>
 					</div>
 				</div>
 				<div class="col-lg-9 col-12">
 					<ul id="top_menu">
-						<li><a href="account.html" class="btn_add">Add Listing</a></li>
+						<li><a href="{% url 'account' %}" class="btn_add">Add Listing</a></li>
 						<li><a href="#sign-in-dialog" id="sign-in" class="login" title="Sign In">Sign In</a></li>
-						<li><a href="wishlist.html" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+						<li><a href="{% url 'wishlist' %}" class="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
 					</ul>
 					<!-- /top_menu -->
 					<a href="#menu" class="btn_mobile">
@@ -60,13 +61,13 @@
 		    <ul>
 		        <li><span><a href="#0">Home</a></span>
 		            <ul>
-		                <li><a href="index.html">Home version 1</a></li>
-		                <li><a href="index-2.html">Home version 2</a></li>
+		                <li><a href="{% url 'home' %}">Home version 2</a></li>
+		                {% comment %} <li><a href="index-2.html">Home version 2</a></li>
 		                <li><a href="index-3.html">Home version 3</a></li>
 		                <li><a href="index-4.html">Home version 4</a></li>
 		                <li><a href="index-5.html">Home version 5</a></li>
 		                <li><a href="index-6.html">Home version 6 (GDPR)</a></li>
-		                <li><a href="index-7.html">Src Address Autocomplete</a></li>
+		                <li><a href="index-7.html">Src Address Autocomplete</a></li> {% endcomment %}
 		            </ul>
 		        </li>
 		        <li><span><a href="#0">Listings</a></span>
@@ -74,29 +75,29 @@
 		                <li>
 		                    <span><a href="#0">Grid Layout</a></span>
 		                    <ul>
-		                        <li><a href="grid-listings-filterscol-search-aside.html">Sidebar+Search mobile 1</a></li>
-		                        <li><a href="grid-listings-filterstop-search-aside.html">Full+Search mobile 1</a></li>
-		                        <li><a href="grid-listings-filterscol.html">Sidebar+Search mobile 2</a></li>
-		                        <li><a href="grid-listings-filterstop.html">Full+Search mobile 2</a></li>
-		                        <li><a href="grid-listings-isotope.html">Full+Isotope filter</a></li>
+		                        <li><a href="{% url 'col_search_aside' %}">Sidebar+Search mobile 1</a></li>
+		                        <li><a href="{% url 'stop_search_aside' %}">Full+Search mobile 1</a></li>
+		                        <li><a href="{% url 'sidebar_search' %}">Sidebar+Search mobile 2</a></li>
+		                        <li><a href="{% url 'full_search' %}">Full+Search mobile 2</a></li>
+		                        <li><a href="{% url 'full-isotope' %}">Full+Isotope filter</a></li>
 		                    </ul>
 		                </li>
 		                <li>
 		                    <span><a href="#0">Row Layout</a></span>
 		                    <ul>
-		                        <li><a href="row-listings-filterscol-search-aside.html">Sidebar+Search mobile 1</a></li>
-		                        <li><a href="row-listings-filterstop-search-aside.html">Full+Search mobile 1</a></li>
+		                        <li><a href="{% url 'col_search_aside' %}">Sidebar+Search mobile 1</a></li>
+		                        <li><a href="{% url 'stop_search_aside' %}">Full+Search mobile 1</a></li>
 		                        <li><a href="row-listings-filterscol.html">Sidebar+Search mobile 2</a></li>
 		                        <li><a href="row-listings-filterstop.html">Full+Search mobile 2</a></li>
 		                        <li><a href="row-listings-isotope.html">Full+Isotope filter</a></li>
 		                    </ul>
 		                </li>
-		                <li><a href="listing-map.html">Listing Map</a></li>
+		                <li><a href="{% url 'listing_map' %}">Listing Map</a></li>
 		                 <li>
 		                    <span><a href="#0">Open Street Map</a></span>
 		                    <ul>
-								<li><a href="grid-listings-filterscol-search-aside-openstreetmap.html">Sidebar+Search mobile 1</a></li>
-								<li><a href="grid-listings-filterstop-search-aside-openstreetmap.html">Full+Search mobile 1</a></li>
+								<li><a href="{% url 'col_search_aside_openstreetmap' %}">Sidebar+Search mobile 1</a></li>
+								<li><a href="{% url 'stop_search_aside_openstreetmap' %}">Full+Search mobile 1</a></li>
 								<li><a href="grid-listings-filterscol-openstreetmap.html">Sidebar+Search mobile 2</a></li>
 								<li><a href="grid-listings-filterstop-openstreetmap.html">Full+Search mobile 2</a></li>
 								<li><a href="grid-listings-isotope-openstreetmap.html">Full+Isotope filter</a></li>
@@ -185,10 +186,10 @@
 				<div class="row">
 					<div class="col-lg-8">
 						<div id="carousel_in" class="owl-carousel owl-theme add_bottom_30">
-					      <div class="item"><img src="img/carousel_detail_1.jpg" alt=""></div>
-					      <div class="item"><img src="img/carousel_detail_2.jpg" alt=""></div>
-					      <div class="item"><img src="img/carousel_detail_3.jpg" alt=""></div>
-					      <div class="item"><img src="img/carousel_detail_4.jpg" alt=""></div>
+					      <div class="item"><img src="{% static 'img/carousel_detail_1.jpg' %}" alt=""></div>
+					      <div class="item"><img src="{% static 'img/carousel_detail_2.jpg' %}" alt=""></div>
+					      <div class="item"><img src="{% static 'img/carousel_detail_3.jpg' %}" alt=""></div>
+					      <div class="item"><img src="{% static 'img/carousel_detail_4.jpg' %}" alt=""></div>
 					    </div>
 						<section id="description">
 							<div class="detail_title_1">
@@ -222,17 +223,17 @@
 							<div class="room_type first">
 								<div class="row">
 									<div class="col-md-4">
-										<img src="img/gallery/hotel_list_1.jpg" class="img-fluid" alt="">
+										<img src="{% static 'img/gallery/hotel_list_1.jpg' %}" class="img-fluid" alt="">
 									</div>
 									<div class="col-md-8">
 										<h4>Single Room</h4>
 										<p>Sit an meis aliquam, cetero inermis vel ut. An sit illum euismod facilisis, tamquam vulputate pertinacia eum at.</p>
 										<ul class="hotel_facilities">
-											<li><img src="img/hotel_facilites_icon_2.svg" alt="">Single Bed</li>
-											<li><img src="img/hotel_facilites_icon_4.svg" alt="">Free Wifi</li>
-											<li><img src="img/hotel_facilites_icon_5.svg" alt="">Shower</li>
-											<li><img src="img/hotel_facilites_icon_7.svg" alt="">Air Condition</li>
-											<li><img src="img/hotel_facilites_icon_8.svg" alt="">Hairdryer</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_2.svg' %}" alt="">Single Bed</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_4.svg' %}" alt="">Free Wifi</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_5.svg' %}" alt="">Shower</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_7.svg' %}" alt="">Air Condition</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_8.svg' %}" alt="">Hairdryer</li>
 										</ul>
 									</div>
 								</div>
@@ -242,17 +243,17 @@
 							<div class="room_type alternate">
 								<div class="row">
 									<div class="col-md-4">
-										<img src="img/gallery/hotel_list_2.jpg" class="img-fluid" alt="">
+										<img src="{% static 'img/gallery/hotel_list_2.jpg' %}" class="img-fluid" alt="">
 									</div>
 									<div class="col-md-8">
 										<h4>Double Room</h4>
 										<p>Sit an meis aliquam, cetero inermis vel ut. An sit illum euismod facilisis, tamquam vulputate pertinacia eum at.</p>
 										<ul class="hotel_facilities">
-											<li><img src="img/hotel_facilites_icon_3.svg" alt="">Double Bed</li>
-											<li><img src="img/hotel_facilites_icon_4.svg" alt="">Free Wifi</li>
-											<li><img src="img/hotel_facilites_icon_6.svg" alt="">Bathtub</li>
-											<li><img src="img/hotel_facilites_icon_7.svg" alt="">Air Condition</li>
-											<li><img src="img/hotel_facilites_icon_8.svg" alt="">Hairdryer</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_3.svg' %}" alt="">Double Bed</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_4.svg' %}" alt="">Free Wifi</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_6.svg' %}" alt="">Bathtub</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_7.svg' %}" alt="">Air Condition</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_8.svg' %}" alt="">Hairdryer</li>
 										</ul>
 									</div>
 								</div>
@@ -262,18 +263,18 @@
 							<div class="room_type last">
 								<div class="row">
 									<div class="col-md-4">
-										<img src="img/gallery/hotel_list_3.jpg" class="img-fluid" alt="">
+										<img src="{% static 'img/gallery/hotel_list_3.jpg' %}" class="img-fluid" alt="">
 									</div>
 									<div class="col-md-8">
 										<h4>Suite Room</h4>
 										<p>Sit an meis aliquam, cetero inermis vel ut. An sit illum euismod facilisis, tamquam vulputate pertinacia eum at.</p>
 										<ul class="hotel_facilities">
-											<li><img src="img/hotel_facilites_icon_3.svg" alt="">King size Bed</li>
-											<li><img src="img/hotel_facilites_icon_4.svg" alt="">Free Wifi</li>
-											<li><img src="img/hotel_facilites_icon_6.svg" alt="">Bathtub</li>
-											<li><img src="img/hotel_facilites_icon_7.svg" alt="">Air Condition</li>
-											<li><img src="img/hotel_facilites_icon_9.svg" alt="">Swimming pool</li>
-											<li><img src="img/hotel_facilites_icon_3.svg" alt="">Hairdryer</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_3.svg' %}" alt="">King size Bed</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_4.svg' %}" alt="">Free Wifi</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_6.svg' %}" alt="">Bathtub</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_7.svg' %}" alt="">Air Condition</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_9.svg' %}" alt="">Swimming pool</li>
+											<li><img src="{% static 'img/hotel_facilites_icon_3.svg' %}" alt="">Hairdryer</li>
 										</ul>
 									</div>
 								</div>
@@ -370,7 +371,7 @@
 							<div class="reviews-container">
 
 								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar1.jpg" alt="">
+									<figure class="rev-thumb"><img src="{% static 'img/avatar1.jpg' %}" alt="">
 									</figure>
 									<div class="rev-content">
 										<div class="rating">
@@ -388,7 +389,7 @@
 								</div>
 								<!-- /review-box -->
 								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar2.jpg" alt="">
+									<figure class="rev-thumb"><img src="{% static 'img/avatar2.jpg' %}" alt="">
 									</figure>
 									<div class="rev-content">
 										<div class="rating">
@@ -406,7 +407,7 @@
 								</div>
 								<!-- /review-box -->
 								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="img/avatar3.jpg" alt="">
+									<figure class="rev-thumb"><img src="{% static 'img/avatar3.jpg' %}" alt="">
 									</figure>
 									<div class="rev-content">
 										<div class="rating">
@@ -621,7 +622,7 @@
 								</select>
 							</div>
 						</li>
-						<li><img src="img/cards_all.svg" alt=""></li>
+						<li><img src="{% static 'img/cards_all.svg' %}" alt=""></li>
 					</ul>
 				</div>
 				<div class="col-lg-6">
@@ -689,17 +690,17 @@
 	<div id="toTop"></div><!-- Back to top button -->
 	
 	<!-- COMMON SCRIPTS -->
-    <script src="js/common_scripts.js"></script>
-	<script src="js/functions.js"></script>
-	<script src="assets/validate.js"></script>
+    <script src="{% static 'js/common_scripts.js' %}"></script>
+	<script src="{% static 'js/functions.js' %}"></script>
+	<script src="{% static 'assets/validate.js' %}"></script>
 	
 	<!-- Map -->
 	<script src="http://maps.googleapis.com/maps/api/js"></script>
-	<script src="js/map_single_hotel.js"></script>
-	<script src="js/infobox.js"></script>
+	<script src="{% static 'js/map_single_hotel.js' %}"></script>
+	<script src="{% static 'js/infobox.js' %}"></script>
 	
 	<!-- INPUT QUANTITY  -->
-	<script src="js/input_qty.js"></script>
+	<script src="{% static 'js/input_qty.js' %}"></script>
 
 	<!-- CAROUSEL -->
 	<script>
