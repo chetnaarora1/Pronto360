@@ -80,10 +80,10 @@ def pricing_tables(request):
     return render(request, 'pricing-tables.html')
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, '/login.html')
 
 def register(request):
-    return render(request, 'register.html')
+    return render(request, '/register.html')
 
 def menu_options(request):
     return render(request, 'menu-options.html')
